@@ -19,14 +19,14 @@ public class Main {
         System.out.println(Arrays.toString(arr6));
         System.out.println();
 
-        //System.out.println("Результат массива: " + checkArr (arr6));
+        System.out.println("Результат массива: " + checkArr (arr6));
 
-        checkArr (arr6);
+        //checkArr (arr6);
 
     }
 
 
-    static void checkArr (int [] arr) {
+    static boolean checkArr (int [] arr) {
 
         int sum = 0;
         int sum1 = arr [0];
@@ -47,7 +47,8 @@ public class Main {
                 System.out.println ("Есть баланс после элемента номер " + i + " (начиная с нулевого элемента). Дальше не проверялось.");
                 System.out.println();
                 System.out.println ("Сумма каждой равной стороны массива равна " + sum1 + ".");
-                break;
+                System.out.println();
+                return true;
             }
 
             else sum1 = sum1 + arr[i+1];
@@ -55,7 +56,7 @@ public class Main {
         }
 
         System.out.println();
-        
+        return false;
     }
 
 
